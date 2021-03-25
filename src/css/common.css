@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: #eedac0;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-right: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #4c3361;
+}
+
+header input {
+  padding: 10px 20px;
+  font-size: 25px;
+  margin: 0;
+  border: 2px solid #4c3361;
+  border-radius: 1em;
+  outline: none;
+  cursor: pointer;
+}
+
+header input::placeholder {
+  font-style: italic;
+  opacity: 0.2;
+  color: #4c3361;
+}
+
+/* Btn load-more */
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4c3361;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button.is-hidden {
+  display: none;
+}
+
+/* Image List */
+.wrapper-gallery {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 7em 0 1em;
+}
+
+.gallery {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-card,
+.stats {
+  list-style-type: none;
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+}
+
+.photo-card {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 22%;
+  height: 14em;
+  margin: 1vw;
+
+  background-color: #eedac0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photo-card__image {
+  display: block;
+  width: 100%;
+  height: 75%;
+
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.stats {
+  justify-content: space-around;
+  width: 100%;
+  height: 25%;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+/* Modal */
+
+.modal__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
